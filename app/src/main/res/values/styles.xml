@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:logo">@mipmap/ic_launcher</item>
+        <item name="android:text">@string/app_name</item>
+    </style>
+
+    <style name="spinner_txt">
+        <item name="android:textColor">#af4010</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+</resources>

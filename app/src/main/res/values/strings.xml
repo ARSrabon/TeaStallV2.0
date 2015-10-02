@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TeaStall V2.0</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="os">
+        <item>Windows 10</item>
+        <item>Windows 8.1</item>
+        <item>Windows 8</item>
+        <item>Windows 7</item>
+        <item>Windows Vista</item>
+        <item>Windows xp</item>
+        <item>Mac OS X</item>
+        <item>Ubuntu 15.04</item>
+        <item>Elementary Os</item>
+        <item>Gnome os</item>
+    </string-array>
+
+    <string-array name="tea_types">
+        <item>Lemon Tea</item>
+        <item>Green Tea</item>
+        <item>Milk Tea</item>
+        <item>Herbal Tea</item>
+        <item>Black Tea</item>
+    </string-array>
+</resources>
