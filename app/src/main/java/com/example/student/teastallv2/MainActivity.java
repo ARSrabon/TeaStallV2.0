@@ -84,6 +84,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 //                Toast.makeText(MainActivity.this , "Position : " + position , Toast.LENGTH_SHORT).show();
                 txt_tea_typ.setText("Tea Type : " + spn_tea_Type.getSelectedItem().toString());
+                if(spn_tea_Type.getSelectedItem().toString().equals("Milk Tea")){
+                    Milk.setEnabled(true);
+                }else {
+                    Milk.setEnabled(false);
+                }
             }
 
             @Override
@@ -145,10 +150,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v == btn_add) {
-            total_customer = Integer.valueOf(T_customer.getText().toString()) + 1;
+            if(Integer.valueOf(T_customer.getText().toString()) >= 0){
+                total_customer = Integer.valueOf(T_customer.getText().toString()) + 1;
+            }else {
+                Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+            }
             T_customer.setText(String.valueOf(total_customer));
         } else if (v == btn_sub) {
-            total_customer = Integer.valueOf(T_customer.getText().toString()) - 1;
+            if(Integer.valueOf(T_customer.getText().toString()) >= 1){
+                total_customer = Integer.valueOf(T_customer.getText().toString()) - 1;
+            }else {
+                Toast.makeText(MainActivity.this, "your total customer is 0", Toast.LENGTH_SHORT).show();
+            }
             T_customer.setText(String.valueOf(total_customer));
         } else if (v == btn_gen) {
             total = price * Integer.valueOf(T_customer.getText().toString());
